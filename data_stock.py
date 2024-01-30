@@ -6,15 +6,16 @@ liste_medicaments = list(set(listu))
 
 data = []
 
-for _ in range(0,2891):
+for _ in range(0,3623):
 
-    client_data = {
-        "pharmacie": randint(0,3623),
-        "medicament": choice(liste_medicaments),
-        "quantitee": randint(0,350)
-    }
+    for i in range(0,3):
+        client_data = {
+            "pharmacie": _,
+            "medicament": choice(liste_medicaments),
+            "quantitee": randint(0,350)
+        }
 
-    data.append(client_data)
+        data.append(client_data)
     
 json_output = json.dumps(data, indent=1)
 with open('data_stock.json', 'w') as file:

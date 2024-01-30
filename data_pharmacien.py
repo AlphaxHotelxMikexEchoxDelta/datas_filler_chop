@@ -7,7 +7,7 @@ fake = Faker('fr_FR')
 
 data = []
 
-for _ in range(0, 1002):
+for _ in range(3001, 10000):
     id_client = _
     nom = fake.first_name()
     prenom = fake.last_name()
